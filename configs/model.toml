@@ -1,0 +1,11 @@
+[default]
+dim_c = 100
+dim_z = 102 
+dims_enc_s = [18, 18]
+# dims_dec_s = [32, 64]
+dims_enc_chr = [128, 32]
+dims_enc_x = [2000, 1000]
+# dims_enc_x = [1000, 500]
+dims_discriminator = [128, 64]
+norm = "ln"
+drop = 0.2

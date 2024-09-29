@@ -1,0 +1,190 @@
+# ga
+[ga]
+raw_data_dirs = [
+    "data/raw/rna/ga",
+]
+raw_data_frags = [
+    "",
+]
+combs = [
+    [ ["rna"] ],
+]
+comb_ratios = [ 
+    [ 1 ],
+]
+
+s_joint = [
+    [ 0 ], 
+]
+
+train_ratio = 1
+N = 256
+
+# ga_tumor
+[ga_tumor]
+raw_data_dirs = [
+    "data/raw/rna/ga_tumor",
+]
+raw_data_frags = [
+    "",
+]
+combs = [
+    [ ["rna"] ],
+   
+]
+comb_ratios = [ 
+    [ 1 ],
+]
+
+s_joint = [
+    [ 0 ],
+]
+
+train_ratio = 1
+N = 256
+
+
+# scsim1-10 simulated single-batch dataset
+[scsim1-10]
+raw_data_dirs = [
+    "data/raw/rna/stimulate/scsim1-10",
+]
+raw_data_frags = [
+    "",
+]
+combs = [
+    [ ["rna"] ],
+]
+comb_ratios = [ 
+    [ 1 ],
+]
+
+s_joint = [
+    [ 0 ], 
+]
+
+train_ratio = 1
+N = 256
+
+
+
+# lung_ts
+[lung_ts]
+raw_data_dirs = [
+    "data/raw/rna/lung_ts/343b",
+    "data/raw/rna/lung_ts/356c",
+    "data/raw/rna/lung_ts/367c",
+    "data/raw/rna/lung_ts/368c",
+    "data/raw/rna/lung_ts/390c",
+]
+
+raw_data_frags = [
+    "",
+    "",
+    "",
+    "",
+    "",
+]
+combs = [
+    [ ["rna"] ],
+    [ ["rna"] ],
+    [ ["rna"] ],
+    [ ["rna"] ],
+    [ ["rna"] ],
+]
+comb_ratios = [ 
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+]
+
+s_joint = [
+    [ 0 ], [ 1 ], [ 2 ], [ 3 ], [ 4 ], 
+]
+
+train_ratio = 1
+N = 256
+
+# wnn_rna
+[wnn_rna]
+raw_data_dirs = [
+    "data/raw/rna+adt/wnn/p1_0",
+    "data/raw/rna+adt/wnn/p2_0",
+    "data/raw/rna+adt/wnn/p3_0",
+    "data/raw/rna+adt/wnn/p4_0",
+    "data/raw/rna+adt/wnn/p5_0",
+    "data/raw/rna+adt/wnn/p6_0",
+    "data/raw/rna+adt/wnn/p7_0",
+    "data/raw/rna+adt/wnn/p8_0",
+]
+raw_data_frags = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+]
+combs = [
+    [ ["rna"] ],
+    [ ["rna"] ],
+    [ ["rna"] ],
+    [ ["rna"] ],
+    [ ["rna"] ],
+    [ ["rna"] ],
+    [ ["rna"] ],
+    [ ["rna"] ],
+]
+comb_ratios = [ 
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+]
+
+s_joint = [
+    [ 0 ], [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ],
+]
+
+train_ratio = 1
+N = 256
+
+
+# sim1 simulated multi-batch dataset
+[sim1]
+raw_data_dirs = [
+    "/root/data/DBP_sa_bc/data/raw/rna/stimulate/sim1/batch1",
+    "/root/data/DBP_sa_bc/data/raw/rna/stimulate/sim1/batch2",
+    "/root/data/DBP_sa_bc/data/raw/rna/stimulate/sim1/batch3",
+    "/root/data/DBP_sa_bc/data/raw/rna/stimulate/sim1/batch4",
+    "/root/data/DBP_sa_bc/data/raw/rna/stimulate/sim1/batch5",
+    # "/root/data/DBP_sa_bc/data/raw/rna/stimulate/sim1/batch6",
+]
+raw_data_frags = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    # "",
+]
+combs = [
+    [ ["rna"] ],
+    [ ["rna"] ],
+    [ ["rna"] ],
+    [ ["rna"] ],
+    [ ["rna"] ],
+    # [ ["rna"] ],
+]
+# comb_ratios = [ 
+#     [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+# ]
+comb_ratios = [ 
+    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], 
+]
+
+# s_joint = [
+#     [ 0 ], [ 1 ], [ 2 ], [ 3 ],  [ 4 ], [ 5 ],
+# ]
+s_joint = [
+    [ 0 ], [ 1 ], [ 2 ], [ 3 ],  [ 4 ], 
+]
+train_ratio = 1
+N = 256
