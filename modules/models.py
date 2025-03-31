@@ -41,7 +41,24 @@ class SCT(nn.Module):
             self.features = o.dims_h[m]
       
      
-        self.alpha = 15 # Change for different datasets
+        if o.experiment == "alpha_5":
+            self.alpha = 5
+        elif o.experiment == "alpha_7":
+            self.alpha = 7
+        elif o.experiment == "alpha_9":
+            self.alpha = 9
+        elif o.experiment == "alpha_11":
+            self.alpha = 11
+        elif o.experiment == "alpha_13":
+            self.alpha = 13
+        elif o.experiment == "alpha_15":
+            self.alpha = 15
+        elif o.experiment == "alpha_17":
+            self.alpha = 17
+        elif o.experiment == "alpha_19":
+            self.alpha = 19
+        elif o.experiment == "alpha_21":
+            self.alpha = 21
           
         self.beta_a = nn.Parameter(th.ones(1, self.dim_c)*self.alpha)  
         self.beta_b = nn.Parameter(th.ones(1, self.dim_c))
