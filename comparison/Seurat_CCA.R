@@ -2,7 +2,7 @@
 # # Batch correction using CCA
 
 # %%
-source(".../DB/preprocess/utils.R")
+source(".../DBP/preprocess/utils.R")
 setwd(".../DBP/")
 library(gridExtra)
 library(RColorBrewer)
