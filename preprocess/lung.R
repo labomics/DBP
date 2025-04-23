@@ -1,7 +1,7 @@
-source("/root/data/DBP_sa_bc/preprocess/utils.R")
+source(".../DBP/preprocess/utils.R")
 library(Matrix)
 
-base_dir <- "/root/data/DBP_sa_bc/data/raw/rna/lung_ts"
+base_dir <- ".../DBP/data/raw/rna/lung"
 obj <- readRDS(pj(base_dir, "lung_ts.rds"))
 obj
 unique(obj@meta.data$Donor)
