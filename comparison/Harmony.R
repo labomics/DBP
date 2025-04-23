@@ -2,18 +2,18 @@
 # # Dimensionality reduction using PCA
 
 # %%
-source("/root/data/DBP_sa_bc/preprocess/utils.R")
-setwd("/root/data/DBP_sa_bc/")
+source(".../DBP/preprocess/utils.R")
+setwd(".../DBP/")
 library(RColorBrewer)
 library(harmony)
 
 parser <- ArgumentParser()
-parser$add_argument("--task", type = "character", default = "wnn_rna")
+parser$add_argument("--task", type = "character", default = "pbmc")
 parser$add_argument("--method", type = "character", default = "harmony")
-parser$add_argument("--exp", type = "character", default = "e1")
+parser$add_argument("--exp", type = "character", default = "alpha_13")
 parser$add_argument("--model", type = "character", default = "default")
 parser$add_argument("--init_model", type = "character", default = "sp_00001899")
-parser$add_argument("--K", type = "integer", default = "20")
+parser$add_argument("--K", type = "integer", default = "50")
 o <- parser$parse_known_args()[[1]]
 
 config <- parseTOML("configs/data.toml")[[o$task]]
