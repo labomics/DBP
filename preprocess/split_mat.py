@@ -1,6 +1,6 @@
 # Split csv matrix into csv vectors for pytorch traning
 import os
-os.chdir("/root/data/DBP_sa_bc/")
+os.chdir(".../DBP/")
 import os.path as path
 from os.path import join as pj
 import argparse
@@ -14,7 +14,7 @@ from tqdm import tqdm
 
  
 parser = argparse.ArgumentParser()
-parser.add_argument('--task', type=str, default="ga_normal")
+parser.add_argument('--task', type=str, default="ga")
 o = parser.parse_args()
 
 
