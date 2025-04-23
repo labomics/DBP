@@ -1,7 +1,7 @@
 source(".../DBP/preprocess/utils.R")
 
-base_dir <- ".../DBP/data/raw/rna+adt/pbmc"
-obj <- LoadH5Seurat(pj(base_dir, "pbmc_multimodal.h5seurat"))
+base_dir <- ".../DBP/data/raw/rna/ga"
+obj <- LoadH5Seurat(pj(base_dir, "obj.h5seurat"))
 # obj <- subset(x = obj, celltype == "Epithial.Cell")
 obj
 unique(obj@meta.data$batch)
