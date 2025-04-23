@@ -85,7 +85,7 @@ for m in masks.keys():
 # ## Create AnnData
 
 # %%
-if o.task == "wnn_rna":
+if o.task == "pbmc":
     labels = []
     for raw_data_dir in o.raw_data_dirs:
         label = utils.load_csv(pj(raw_data_dir, "label", "meta.csv"))
@@ -94,7 +94,7 @@ if o.task == "wnn_rna":
     ann_data = ad.AnnData(np.concatenate(np.array(counts["rna"]), axis=0))
     ann_data.obs["batch_indices"] = s
     ann_data.obs["cell_types"] = labels
-elif o.task == "lung_ts":
+elif o.task == "lung":
     labels = []
     for raw_data_dir in o.raw_data_dirs:
         label = utils.load_csv(pj(raw_data_dir, "label", "meta.csv"))
