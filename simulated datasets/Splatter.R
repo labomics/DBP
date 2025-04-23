@@ -1,5 +1,5 @@
 library(splatter)
-setwd("/root/data/data/splatter/")
+setwd(".../DBP/data/splatter/")
 
 source("sample.R")
 
