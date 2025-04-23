@@ -1,19 +1,19 @@
 # %%
 import os, sys
 
-sys.path.append('/root/data/data/scsim-master')
+sys.path.append('.../DBP/data/scsim-master')
 from scsim import scsim
 
 import numpy as np
 
 # %%
 ## Create output directory structure
-if not os.path.exists('/root/data/data/scsim-master/data/Simulations_6/'):
-    # os.mkdir('/root/data/data/scsim-master/data/Simulations/')
-    os.mkdir('/root/data/data/scsim-master/data/Simulations_6/deloc_0.75')
-    # os.mkdir('/root/data/data/scsim-master/data/Simulations/deloc_0.75')
-    # os.mkdir('/root/data/data/scsim-master/data/Simulations/deloc_0.00')
-    # os.mkdir('/root/data/data/scsim-master/data/Simulations/runtime_evaluation')
+if not os.path.exists('.../DBP/data/scsim-master/data/Simulations_6/'):
+    # os.mkdir('.../DBP/data/scsim-master/data/Simulations/')
+    os.mkdir('.../DBP/data/scsim-master/data/Simulations_6/deloc_0.75')
+    # os.mkdir('.../DBP/data/scsim-master/data/Simulations/deloc_0.75')
+    # os.mkdir('.../DBP/data/scsim-master/data/Simulations/deloc_0.00')
+    # os.mkdir('.../DBP/data/scsim-master/data/Simulations/runtime_evaluation')
 
 # %%
 ngenes=20000    
@@ -28,7 +28,7 @@ progcellfrac = .35
 ncells = 60000
 # ncells = 50000
 deprob = .025
-outdirbase = '/root/data/data/scsim-master/data/Simulations_6/deloc_%.2f/Seed_%d'
+outdirbase = '.../DBP/data/scsim-master/data/Simulations_6/deloc_%.2f/Seed_%d'
 
 # %%
 def save_df_to_npz(obj, filename):
