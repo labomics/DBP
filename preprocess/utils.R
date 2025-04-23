@@ -1,5 +1,4 @@
-source("/root/data/DBP_sa_bc/utlis/utils.R")
-# source("/root/lry/DBP_sa_bc/utlis/utils.R")
+source(".../DBP/utlis/utils.R")
 # 
 
 library(Seurat)
