@@ -83,14 +83,14 @@ for m in masks.keys():
             counts[m][i] = count[:, mask]
 
 # %%
-if o.task == "wnn_rna":
+if o.task == "pbmc":
     labels = []
     for raw_data_dir in o.raw_data_dirs:
         label = utils.load_csv(pj(raw_data_dir, "label", "meta.csv"))
         labels += utils.transpose_list(label)[10][1:]
     labels = np.array(labels)
     print(np.unique(labels))
-elif o.task == "lung_ts":
+elif o.task == "lung":
     labels = []
     for raw_data_dir in o.raw_data_dirs:
         label = utils.load_csv(pj(raw_data_dir, "label", "meta.csv"))
