@@ -10,7 +10,7 @@ Rscript preprocess/combine_subsets.R --task pbmc  && py preprocess/split_mat.py 
 
 ### Training DBP
 ```bash
-CUDA_VISIBLE_DEVICES=0 py run.py --exp e0 --task pbmc
+CUDA_VISIBLE_DEVICES=0 py run.py --exp alpha_13 --task pbmc
 ```
 ### Comparison methods
 ```bash
