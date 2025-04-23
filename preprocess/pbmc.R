@@ -1,10 +1,10 @@
-source("/root/data/DBP_sa_bc/preprocess/utils.R")
+source(".../DBP/preprocess/utils.R")
 library(Matrix)
 
-base_dir <- "/root/data/DBP_sa_bc/data/raw/rna/pbmc_bmn48"
+base_dir <- ".../DBP/data/raw/rna/pbmc"
 
 # # load data
-obj <- LoadH5Seurat(pj(base_dir, "B+Mono+NK+CD4T+CD8T_cells.h5seurat")) 
+obj <- LoadH5Seurat(pj(base_dir, "pbmc_multimodal.h5seurat")) 
 obj
 
 rna_split <- SplitObject(obj, split.by = "batch")
