@@ -141,8 +141,7 @@ def init_seed():
 def init_dirs():
     data_folder = re.sub("_generalize", "_transfer", o.task)
     if o.use_shm == 1:
-        o.data_dir = pj("/root/data/DBP_sa_bc/data", "processed", data_folder)
-        # o.data_dir = pj("/root/lry/DBP_sa_bc/data", "processed", data_folder)
+        o.data_dir = pj(".../DBP/data", "processed", data_folder)
     else:
         o.data_dir = pj("data", "processed", data_folder)
     o.result_dir = pj("result", o.task, o.experiment, o.model)
@@ -160,8 +159,7 @@ def load_data_config():
     
     global data_config
     cfg_task = re.sub("_atlas|_generalize|_transfer|_ref_.*", "", o.task)
-    data_config = utils.load_toml("/root/data/DBP_sa_bc/configs/data.toml")[cfg_task]
-    # data_config = utils.load_toml("/root/lry/DBP_sa_bc/configs/data.toml")[cfg_task]
+    data_config = utils.load_toml(".../DBP/configs/data.toml")[cfg_task]
     for k, v in data_config.items():
         vars(o)[k] = v
 
@@ -171,8 +169,7 @@ def load_data_config():
 
         o.dims_s = {k: v + 1 for k, v in o.dims_s.items()}
 
-        data_config_ref = utils.load_toml("/root/data/DBP_sa_bc/configs/data.toml")[o.reference]
-        # data_config_ref = utils.load_toml("/root/lry/DBP_sa_bc/configs/data.toml")[o.reference]
+        data_config_ref = utils.load_toml(".../DBP/configs/data.toml")[o.reference]
         _, _, s_ref, dims_s_ref = utils.gen_all_batch_ids(data_config_ref["s_joint"], 
                                                     data_config_ref["combs"])
         o.subset_ids_ref = {m: [] for m in dims_s_ref}
@@ -186,11 +183,9 @@ def load_data_config():
 
 
 def load_model_config():
-    model_config = utils.load_toml("/root/data/DBP_sa_bc/configs/model.toml")["default"]
-    # model_config = utils.load_toml("/root/lry/DBP_sa_bc/configs/model.toml")["default"]
+    model_config = utils.load_toml(".../DBP/configs/model.toml")["default"]
     if o.model != "default":
-        model_config.update(utils.load_toml("/root/data/DBP_sa_bc/configs/model.toml")[o.model])
-        # model_config.update(utils.load_toml("/root/lry/DBP_sa_bc/configs/model.toml")[o.model])
+        model_config.update(utils.load_toml(".../DBP/configs/model.toml")[o.model])
     for k, v in model_config.items():
         vars(o)[k] = v
     o.dim_z = o.dim_c + o.dim_b
