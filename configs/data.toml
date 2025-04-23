@@ -68,14 +68,14 @@ N = 256
 
 
 
-# lung_ts
-[lung_ts]
+# lung
+[lung]
 raw_data_dirs = [
-    "data/raw/rna/lung_ts/343b",
-    "data/raw/rna/lung_ts/356c",
-    "data/raw/rna/lung_ts/367c",
-    "data/raw/rna/lung_ts/368c",
-    "data/raw/rna/lung_ts/390c",
+    "data/raw/rna/lung/343b",
+    "data/raw/rna/lung/356c",
+    "data/raw/rna/lung/367c",
+    "data/raw/rna/lung/368c",
+    "data/raw/rna/lung/390c",
 ]
 
 raw_data_frags = [
@@ -103,8 +103,8 @@ s_joint = [
 train_ratio = 1
 N = 256
 
-# wnn_rna
-[wnn_rna]
+# pbmc
+[pbmc]
 raw_data_dirs = [
     "data/raw/rna+adt/wnn/p1_0",
     "data/raw/rna+adt/wnn/p2_0",
