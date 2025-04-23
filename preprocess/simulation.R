@@ -1,6 +1,6 @@
-source("/root/data/DBP_sa_bc/preprocess/utils.R")
+source(".../DBP/preprocess/utils.R")
 
-base_dir <- "/root/data/DBP_sa_bc/data/raw/rna/stimulate/sim1"
+base_dir <- ".../DBP/data/raw/rna/stimulate/sim1"
 cell_path <- pj(base_dir, "cells.csv")
 count_path <- pj(base_dir, "counts.csv")
 gene_path <- pj(base_dir, "genes.csv")
