@@ -3,7 +3,7 @@
 
 # %%
 import os
-os.chdir("/root/data/DBP_sa_bc/")
+os.chdir(".../DBP/")
 from os.path import join as pj
 import argparse
 import sys
@@ -17,12 +17,12 @@ from scETM import scETM, UnsupervisedTrainer, evaluate, prepare_for_transfer
 
 # %%
 parser = argparse.ArgumentParser()
-parser.add_argument('--task', type=str, default='wnn_rna')
-parser.add_argument('--experiment', type=str, default='e1')
+parser.add_argument('--task', type=str, default='pbmc')
+parser.add_argument('--experiment', type=str, default='alpha_13')
 parser.add_argument('--model', type=str, default='default')
 parser.add_argument('--init_model', type=str, default='sp_00001899')
 parser.add_argument('--method', type=str, default='scETM')
-parser.add_argument('--K', type=int, default='20')
+parser.add_argument('--K', type=int, default='50')
 o, _ = parser.parse_known_args()  # for python interactive
 # o = parser.parse_args()
 
