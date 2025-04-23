@@ -60,10 +60,10 @@ for (i in seq_along(subset_names)) {
     cell_name_list[[subset_name]] <- read.csv(pj(pp_dir, paste0("subset_", subset_ids[i]),
         "cell_names.csv"), header = T)[, 2]  
 
-    if ("lung_ts" %in% o$task){
+    if ("lung" %in% o$task){
         label_list1[[subset_name]] <- read.csv(label_paths[i], header = T)[, "Celltypes1"]
         label_list2[[subset_name]] <- read.csv(label_paths[i], header = T)[, "Celltypes_updated_July_2020"]
-    }else if("wnn_rna" %in% o$task){
+    }else if("pbmc" %in% o$task){
         label_list1[[subset_name]] <- read.csv(label_paths[i], header = T)[, "celltype.l1"]
         label_list2[[subset_name]] <- read.csv(label_paths[i], header = T)[, "celltype.l2"]
     }else if("ga" %in% o$task){
@@ -133,11 +133,11 @@ SaveH5Seurat(obj, pj(output_dir1, "obj.h5seurat"), overwrite = TRUE)
 
 # %%
 # obj <- LoadH5Seurat(pj(output_dir, "obj.h5seurat"), assays = "rna", reductions = "umap")
-if ("wnn_rna" %in% o$task){
+if ("pbmc" %in% o$task){
     batch_cols <- col_8
     celltype1_cols <- col_8
     celltype2_cols <- col_31
-}else if("lung_ts" %in% o$task){
+}else if("lung" %in% o$task){
     batch_cols <- col_5
     celltype1_cols <- col_16
     celltype2_cols <- col_28
@@ -208,11 +208,11 @@ obj <- RunUMAP(obj, reduction = 'harmony_rna', dims = 1:K, reduction.name = "har
 SaveH5Seurat(obj, pj(output_dir2, "obj.h5seurat"), overwrite = TRUE)
 
 # %%
-if ("wnn_rna" %in% o$task){
+if ("pbmc" %in% o$task){
     batch_cols <- col_8
     celltype1_cols <- col_8
     celltype2_cols <- col_31
-}else if("lung_ts" %in% o$task){
+}else if("lung" %in% o$task){
     batch_cols <- col_5
     celltype1_cols <- col_16
     celltype2_cols <- col_28
