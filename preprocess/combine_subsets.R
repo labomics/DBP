@@ -1,9 +1,9 @@
-source("/root/data/DBP_sa_bc/preprocess/utils.R")
-setwd("/root/data/DBP_sa_bc/")
+source(".../DBP/preprocess/utils.R")
+setwd(".../DBP/")
 
 
 parser <- ArgumentParser()
-parser$add_argument("--task", type = "character", default = "ga_split")
+parser$add_argument("--task", type = "character", default = "pbmc")
 o <- parser$parse_args()
 # o <- parser$parse_known_args()[[1]]  # for python interactive
 task <- o$task
